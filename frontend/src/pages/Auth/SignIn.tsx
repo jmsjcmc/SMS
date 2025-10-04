@@ -69,7 +69,12 @@ export default function SignIn() {
             <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
             <div className="relative">
                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
-                <input type="password" name="password" />
+                <input type="password" name="password" className={`w-full pl-10 pr-12 py-3 rounded-lg border ${
+                    formState.errors.password
+                    ? 'border-red-500'
+                    : 'border-gray-300'
+                } focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors`}
+                placeholder="Enter your password"/>
             </div>
           </div>
         </form>
