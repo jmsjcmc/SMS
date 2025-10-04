@@ -16,7 +16,10 @@ exports.createUser = async (req, res) => {
         res.status(201).json({
             _id: user._id,
             firstName: user.firstName,
-            lastName: user.lastName
+            lastName: user.lastName,
+            username: user.username,
+            email: user.email,
+            password: user.password
         })
     } catch (error) {
         
